@@ -1,0 +1,77 @@
+/* Split Easy design tokens (PLAN.md §2). The contrast test parses this file. */
+
+:root,
+:root[data-theme='light'] {
+  color-scheme: light;
+  --paper: #fbf5ec;
+  --surface: #fffbf5;
+  --ink: #2b1d14;
+  --ink-muted: #6b5647;
+  --primary: #b4482a;
+  --on-primary: #ffffff;
+  --accent: #e9a23b;
+  --on-accent: #2b1d14;
+  --gets-back: #2f6b40;
+  --owes: #9a3324;
+  --focus: #1d4e89;
+  --line: #e8dccb;
+  --primary-soft: #f9ece4;
+  --toast-action: #e9a23b;
+  --shadow: 0 1px 2px rgb(43 29 20 / 0.06), 0 4px 14px rgb(43 29 20 / 0.06);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme='light']) {
+    color-scheme: dark;
+    --paper: #1c1410;
+    --surface: #2a1f19;
+    --ink: #f6ede1;
+    --ink-muted: #c9b8a6;
+    --primary: #e8784f;
+    --on-primary: #1c1410;
+    --accent: #f2b65a;
+    --on-accent: #1c1410;
+    --gets-back: #8ccb9b;
+    --owes: #f08f7a;
+    --focus: #f2b65a;
+    --line: #3a2c23;
+    --primary-soft: #3d2a20;
+    --toast-action: #b4482a;
+    --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 4px 14px rgb(0 0 0 / 0.25);
+  }
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --paper: #1c1410;
+  --surface: #2a1f19;
+  --ink: #f6ede1;
+  --ink-muted: #c9b8a6;
+  --primary: #e8784f;
+  --on-primary: #1c1410;
+  --accent: #f2b65a;
+  --on-accent: #1c1410;
+  --gets-back: #8ccb9b;
+  --owes: #f08f7a;
+  --focus: #f2b65a;
+  --line: #3a2c23;
+  --primary-soft: #3d2a20;
+  --toast-action: #b4482a;
+  --shadow: 0 1px 2px rgb(0 0 0 / 0.3), 0 4px 14px rgb(0 0 0 / 0.25);
+}
+
+:root {
+  --font-display: 'Fraunces', ui-serif, Georgia, serif;
+  --font-ui: 'Figtree', ui-rounded, system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --radius: 14px;
+  --radius-sm: 10px;
+  --tap: 44px;
+  --space-1: 4px;
+  --space-2: 8px;
+  --space-3: 12px;
+  --space-4: 16px;
+  --space-5: 24px;
+  --space-6: 32px;
+  --maxw: 720px;
+  --motion: 140ms;
+}

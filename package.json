@@ -1,0 +1,39 @@
+{
+  "name": "split-easy",
+  "private": true,
+  "version": "1.0.0",
+  "description": "Split Easy: fair shares, no fuss. A no-account, offline expense splitter.",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 8840 --strictPort --host localhost",
+    "build": "vite build && node scripts/check-budget.mjs",
+    "preview": "vite preview --port 8840 --strictPort --host localhost",
+    "typecheck": "tsc -p tsconfig.app.json --noEmit && tsc -p tsconfig.node.json --noEmit && tsc -p tsconfig.test.json --noEmit",
+    "test": "FC_SEED=20261120 vitest run",
+    "test:e2e": "playwright test",
+    "icons": "pwa-assets-generator"
+  },
+  "dependencies": {
+    "@fontsource-variable/figtree": "^5.3.0",
+    "@fontsource-variable/fraunces": "^5.3.0",
+    "lz-string": "^1.5.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "wouter": "^3.13.0"
+  },
+  "devDependencies": {
+    "@axe-core/playwright": "^4.14.0",
+    "@playwright/test": "^1.65.1",
+    "@types/node": "^24.19.2",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vite-pwa/assets-generator": "^2.0.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "fast-check": "^4.10.3",
+    "typescript": "~7.0.2",
+    "vite": "^8.3.6",
+    "vite-plugin-pwa": "^2.0.0",
+    "vitest": "^5.1.1",
+    "workbox-window": "^7.4.1"
+  }
+}

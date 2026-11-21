@@ -1,0 +1,81 @@
+.print-only {
+  display: none;
+}
+.print-footer {
+  margin-top: var(--space-6);
+  font-size: 0.85rem;
+  color: var(--ink-muted);
+}
+
+@media print {
+  :root,
+  :root[data-theme] {
+    --paper: #fff;
+    --surface: #fff;
+    --ink: #000;
+    --ink-muted: #333;
+    --line: #999;
+    --gets-back: #000;
+    --owes: #000;
+    --primary-soft: #fff;
+    color-scheme: light;
+  }
+  @page {
+    margin: 16mm 14mm;
+  }
+  body {
+    background: #fff;
+    color: #000;
+    font-size: 11pt;
+  }
+  .app-header,
+  .app-footer,
+  .skip-link,
+  .tabs,
+  .fab,
+  .toast-region,
+  .banner,
+  .no-print,
+  button,
+  nav {
+    display: none !important;
+  }
+  .print-only {
+    display: block;
+  }
+  main {
+    max-width: none;
+    padding: 0;
+  }
+  .group-head {
+    display: none;
+  }
+  .card {
+    box-shadow: none;
+    border: 0;
+    padding: 0;
+  }
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+  table.data {
+    font-size: 10pt;
+  }
+  table.data thead {
+    display: table-header-group;
+  }
+  table.data tr,
+  li,
+  section > h2 {
+    break-inside: avoid;
+    page-break-inside: avoid;
+  }
+  section > h2 {
+    break-after: avoid;
+    margin-top: 14pt;
+  }
+  .table-wrap {
+    overflow: visible;
+  }
+}

@@ -1,0 +1,33 @@
+node_modules/
+dist/
+dist-ssr/
+.next/
+out/
+.vercel/
+.turbo/
+coverage/
+playwright-report/
+test-results/
+blob-report/
+logs/*.jsonl
+logs/*.err
+logs/*.pid
+logs/*.out
+.DS_Store
+*.local
+.env
+.env.*
+!.env.example
+
+# build runner output
+logs/
+build.log
+.vercel
+
+# build tooling (kept local)
+prompts/
+reviews/
+run_opus.sh
+watch_*.sh
+logs/
+build.log

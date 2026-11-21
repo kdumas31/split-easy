@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <title>Split Easy</title>
+    <meta name="description" content="Split Easy: fair shares, no fuss. Split trip, rent, and dinner costs with friends. No account, works offline." />
+    <meta name="theme-color" content="#FBF5EC" />
+    <meta name="color-scheme" content="light dark" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="apple-touch-icon" href="/icons/apple-touch-icon-180.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Split Easy" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+    <script>
+      // Pre-paint theme: set data-theme before React loads so there is no flash.
+      ;(function () {
+        var t = 'system'
+        try {
+          var v = localStorage.getItem('split-easy:theme')
+          if (v === 'light' || v === 'dark') t = v
+        } catch (e) {}
+        document.documentElement.setAttribute('data-theme', t)
+        var dark = t === 'dark' || (t === 'system' && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)
+        if (dark) document.querySelector('meta[name="theme-color"]').setAttribute('content', '#1C1410')
+      })()
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <noscript>Split Easy needs JavaScript turned on.</noscript>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>
